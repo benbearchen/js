@@ -10,6 +10,10 @@ worker.onmessage = function(event) {
 	document.getElementById("v").value = event.data;
 };
 
+worker.onerror = function(error) {
+	alert(error.message);
+};
+
 worker.postMessage(1000);
 </script>
 </body>
